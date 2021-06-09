@@ -48,7 +48,7 @@ const containsAnd = (arr) => {
     //The easiest way to determine if an array contains a primitive value is to use array.includes()
     return (item.includes('and'));
   });
-  return newArr3 
+  return newArr3;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -61,9 +61,11 @@ For example, oddValues([1,2,3]) returns [1,3].
 
 const oddValues = (arr) => {
   // Solution code here...
-  let newArr3 = arr.filter(item =>;
- return !arr.includes(item);
-});
+  let newArr3 = arr.filter(item =>{
+    return (item % 2 !== 0)
+  });
+ return newArr3;
+};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 5
@@ -76,10 +78,11 @@ For example, notInFirstArray([1,2,3], [1,2,3,4]) returns [4].
 const notInFirstArray = (forbiddenValues, arr) => {
   // Solution code here...
 
-  
-     let arrayNew3 = arr.filter(item => (forbiddenValues.includes(item) === 0)); {
-        return arrayNew3;
  
+     let arrayNew3 = arr.filter(item => (forbiddenValues.includes(item) === false)); 
+        
+     
+     return arrayNew3;
 };
 
 /* ------------------------------------------------------------------------------------------------
