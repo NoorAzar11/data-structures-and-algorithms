@@ -26,7 +26,9 @@ let starWarsPeople = [
 
 const sortStarWarsCharacters = (starWarsArr) => {
   // Solution code here...
-}
+return starWarsArr2.sort((a,b) => b.height - a.height);
+
+};
 
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 2
@@ -36,6 +38,9 @@ Write a function named removeThree that takes an index and an array. The functio
 
 const removeThree = (idx, arr) => {
   // Solution code here...
+
+  arr.splice(idx,3);
+  return arr;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -46,6 +51,8 @@ Write a function named joinArray that takes an array and joins all of the elemen
 
 const joinArray = (arr) => {
   // Solution code here...
+  let joining=arr.join(' ');
+  return joining;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -64,6 +71,9 @@ For example, if the input is 'Welcome', the output will be:
 const howMuchPencil = (str) => {
   let result = [];
   // Solution code here...
+  for(i=0;i<=str.length;i++){
+result.push(str.slice[i]);
+  }
   return result;
 };
 
@@ -77,6 +87,7 @@ For example, wordsToCharList('gregor') returns ['g','r','e','g','o','r'].
 
 const wordsToCharList = (arr) => {
   // Solution code here...
+  return arr.split('');
 };
 
 
@@ -118,12 +129,19 @@ const gruffaloCrumble = {
     'Spread the crisp evenly over the gruffalo mixture',
     'Bake for 12-15 hours',
   ]
+
 };
 
 
 const listFoods = (recipe) => {
   let result = [];
   // Solution code here...
+recipe.ingredients.forEach(element => {
+  let item=element.slice(element.indexOf(' ')+1);
+  let item2=item.slice(item.indexOf(' ')+1);
+  result.push(item2);
+  
+});
   return result;
 };
 
