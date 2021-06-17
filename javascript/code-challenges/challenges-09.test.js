@@ -40,9 +40,9 @@ Write a function named checkValues that takes in an object and a value and retur
 
 const checkValues = (obj, value) => {
   // Solution code here...
-  let val=Object.values(obj);
-  let arr=val.include(value) ? true : false ;
-  return arr;
+  let val=Object.values(obj).include(value);
+  // let arr=val.include(value) ? true : false ;
+  return val;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -67,13 +67,8 @@ HR has asked you to change the data to make it easier to print so that it looks 
 const updateNumbers = (obj) => {
   // Solution code here...
 
-for(let key in obj){
-return `${key} : ${obj[key]}`;}
-// let arRay=[];
-//  arRay=Object.entries(obj).map((element)=>{
-//   return `${element[0]}:${element[1]}`
-
-//   })
+let val=Object.entries(obj).map(item => item.join(': '))
+return val;
 };
 
 
@@ -149,6 +144,7 @@ hasChildrenValues(characters, 'Sansa') will return false
 
 const hasChildrenValues = (arr, character) => {
   // Solution code here...
+// 
 
 };
 
