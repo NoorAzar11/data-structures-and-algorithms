@@ -26,7 +26,7 @@ For example, ['apple', 'banana', 'MacGyver'] returns ['Apple', 'Banana', 'MacGyv
 
 const toTitleCase = (arr) => {
   // Solution code here...
- return arr.map(word => word.replace(word.charAt(0),word.charAt(0).toUpperCase()));
+ return arr.map(fruits => fruits.replace(fruits.charAt(0),fruits.charAt(0).toUpperCase()));
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -102,7 +102,7 @@ let starWarsData = [{
 
 let biggerThanLuke = (arr) => {
   // Solution code here...
-  return arr.filter(people => people.mass >77).map(people => people.name).join(' - ')
+  return arr.filter(names => names.mass >77).map(names => names.name).join(' - ')
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -121,7 +121,7 @@ This data could be sorted by name or price.
 
 const sortBy = (property, arr) => {
   // Solution code here...
-  return arr.sort((a,b)=> a[property] > b[property] ? 1 : -1);
+  return arr.sort((x,y)=> x[property] > y[property] ? 1 : -1);
 };
 
 /* ------------------------------------------------------------------------------------------------
